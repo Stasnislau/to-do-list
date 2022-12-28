@@ -1,0 +1,42 @@
+form{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+input
+{
+    border-radius: 5px;
+}
+.submit-button{
+    border-radius: 5px;
+    background-color: aquamarine;
+    border: 3px solid yellow;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.error-message
+{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.add-new-item{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
