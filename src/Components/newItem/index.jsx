@@ -4,6 +4,17 @@ import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import { addNote } from "../../Actions";
 const NewItem = () => {
+  const dateIsValid = (dateStr) => {
+    const date = new Date(dateStr);
+
+    const timestamp = date.getTime();
+
+    if (typeof timestamp !== "number" || Number.isNaN(timestamp)) {
+      return false;
+    }
+
+    return date.toISOString().startsWith(dateStr);
+  };
   const dispatch = useDispatch();
   const validate = (values) => {
     const errors = {};
@@ -21,7 +32,13 @@ const NewItem = () => {
       errors.dateOfBirth = "Required";
     } else if (values.dateOfBirth.length !== 10) {
       errors.dateOfBirth = "Must be 10 characters";
-    } else if (values.dateOfBirth[2] !== "." || values.dateOfBirth[5] !== ".") {
+    } else if (values.dateOfBirth.match(/^[0-9]{2}[.][0-9]{2}[.][0-9]{4}$/)) {
+      const date = values.dateOfBirth.split(".");
+      const isoFormatted = date[2] + "-" + date[1] + "-" + date[0];
+      if (!dateIsValid(isoFormatted)) {
+        errors.dateOfBirth = "Must be valid date";
+      }
+    } else {
       errors.dateOfBirth = "Must be in format dd.mm.yyyy";
     }
     return errors;

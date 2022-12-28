@@ -12,8 +12,8 @@
     display: grid;
     justify-items: center;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: Repeat(auto-fill, 290px);
-    grid-auto-rows: 290px;
+    grid-template-rows: minmax(257px, auto);
+    grid-auto-rows: minmax(257px, auto);
     grid-gap: 50px;
     margin: 10px;
 }

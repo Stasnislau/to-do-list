@@ -1,13 +1,16 @@
 form{
-    background-color: aqua;
+    background-color: lightcyan;
     padding: 10px;
     border-radius: 10px;
-    border: 3px solid red;
+    border: 3px solid greenyellow;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-
+}
+form:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
 }
 input
 {
@@ -31,12 +34,13 @@ input
     margin-top: 5px;
 }
 .add-new-item{
-    background-color: aqua;
+    background-color: lightcyan;
     padding: 10px;
     border-radius: 10px;
-    border: 3px solid red;
-    display: flex;
-    flex-direction: column;
+    border: 3px solid greenyellow;
     align-items: center;
-    flex-wrap: wrap;
+}
+.add-new-item:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
 }
