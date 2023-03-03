@@ -1,5 +1,5 @@
 
-This is a small project about creating and displaying cards that can help you remember your friends' birthdays. It was implemented using ReactJS, Redux and formik library. 
+The Birthday Notes project is a web application developed using React, CSS, JavaScript, and Redux, designed to provide users with a simple and intuitive platform for managing cards with the names and birthdays of friends. Formik library is used for forms here as well.
 Demo for this project: https://birthday-notes-stasnislau.netlify.app/
 ## Available Scripts
 
